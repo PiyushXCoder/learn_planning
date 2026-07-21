@@ -1,0 +1,14 @@
+[book]
+title = "Planning Software: A Torrent Client Case Study"
+authors = ["Piyush Raj Mishra"]
+language = "en"
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output]
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
