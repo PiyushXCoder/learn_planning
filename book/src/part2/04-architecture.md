@@ -70,7 +70,7 @@ The Tracker box is drawn as an external cylinder deliberately. Our Tracker Clien
 A `classDiagram` at this stage isn't about full implementation detail (that's premature per [Module Layout](./08-module-layout.md)) — it's about pinning down the *public shape* each component presents to its neighbors, since that shape is what the rest of the plan (data flow, concurrency messages) depends on.
 
 ```mermaid
-classDiagram
+classDiagram-v2
     class TorrentParser {
         +parse(bytes) Result~Torrent~
     }

@@ -114,7 +114,7 @@ erDiagram
 **Question:** "What are the actual structs/classes, their fields, their methods, and their type relationships (inheritance, composition, trait implementation)?"
 
 ```mermaid
-classDiagram
+classDiagram-v2
     class PeerConnection {
         -TcpStream socket
         -bool am_choking
