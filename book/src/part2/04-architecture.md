@@ -90,7 +90,7 @@ classDiagram
         +on_peer_disconnected(peer_id)
     }
     class DiskWriter {
-        +write_piece(index, Bytes) Result~()~
+        +write_piece(index, Bytes) Result
     }
 
     TorrentParser --> TrackerClient : produces Torrent for
