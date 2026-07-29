@@ -1,0 +1,27 @@
+.mermaid svg {
+  cursor: zoom-in;
+}
+
+.mermaid.mermaid-zoomed {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: auto;
+}
+
+.mermaid.mermaid-zoomed svg {
+  cursor: zoom-out;
+  width: auto !important;
+  height: auto !important;
+  max-width: none;
+  transform: scale(1.8);
+  transform-origin: center;
+  background: var(--vp-c-bg);
+  border-radius: 8px;
+  padding: 1rem;
+}
