@@ -1,27 +1,63 @@
-.mermaid svg {
-  cursor: zoom-in;
-}
-
-.mermaid.mermaid-zoomed {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.85);
-  overflow: auto;
-}
-
-.mermaid.mermaid-zoomed svg {
-  cursor: zoom-out;
-  width: auto !important;
-  height: auto !important;
-  max-width: none;
-  transform: scale(1.8);
-  transform-origin: center;
-  background: var(--vp-c-bg);
+.mermaid {
+  position: relative;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
-  padding: 1rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.mermaid svg {
+  display: block;
+  width: 100%;
+  height: 420px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.mermaid svg:active {
+  cursor: grabbing;
+}
+
+.mermaid::after {
+  content: 'scroll to zoom · drag to pan';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-bg-soft);
+  padding: 2px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.mermaid:hover::after {
+  opacity: 1;
+}
+
+.mermaid-reset-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.mermaid:hover .mermaid-reset-btn {
+  opacity: 1;
+}
+
+.mermaid-reset-btn:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
 }
